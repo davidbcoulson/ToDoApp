@@ -1,0 +1,14 @@
+<div class="row mainArea" >
+
+        <div class="form-group">
+            <input class="form-control" (change)="addToList($event.target.value)" [value]="entry">
+            <div class="form-control" *ngFor="let item of toDoList" [value]="item.title" (click)="item.completed = true">
+                <div *ngIf="!item.completed">
+                    {{item.title}}
+                    <a class="btn btn-primary" (click)="item.completed = true">completed</a>
+                </div>
+            </div>
+        </div>
+
+
+</div>
