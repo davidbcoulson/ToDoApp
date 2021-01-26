@@ -23,7 +23,8 @@ export class MainComponent implements OnInit {
     if(text !== ''){
       const task = {
         title: text,
-        completed: false
+        completed: false,
+        selected: false
       }
       this.toDoList.push(task)
       console.log(this.toDoList)

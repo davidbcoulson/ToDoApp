@@ -22,3 +22,20 @@ h1{
     box-shadow: 2px 4px navy;
     padding: 26px;
 }
+
+.checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: #ccc;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid navy;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+    background-color: gray;
+}
+

@@ -2,10 +2,13 @@
 
         <div class="form-group">
             <input class="form-control" (change)="addToList($event.target.value)" [value]="entry">
-            <div class="form-control" *ngFor="let item of toDoList" [value]="item.title" (click)="item.completed = true">
-                <div *ngIf="!item.completed">
-                    {{item.title}}
-                    <a class="btn btn-primary" (click)="item.completed = true">completed</a>
+            <div class="form-control" *ngFor="let item of toDoList" [value]="item.title">
+                <div *ngIf="!item.completed" class="row">
+                    <div class="col-sm-10">
+                        <div *ngIf="item.selected"><i class="glyphicon glyphicon-remove" (click)="item.completed = true"></i></div>
+                        <p>{{item.title}}</p>
+                    </div>
+                    <div (click)="item.selected = true" class="col-sm-2"><input type="checkbox" class="checkbox-round"/></div>
                 </div>
             </div>
         </div>
